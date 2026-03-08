@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
+}
+
+.category-container {
+    max-width: 420px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* TITLE */
+
+.category-title {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* TOP SECTION */
+
+.category-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* PRODUCT CARD */
+
+.product-card {
+    margin-bottom: 30px;
+}
+
+.product-img {
+    position: relative;
+}
+
+.product-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* DISCOUNT */
+
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #7aa7b1;
+    color: black;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+/* PRODUCT TITLE */
+
+.product-card h3 {
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+/* PRICE */
+
+.price {
+    font-size: 18px;
+}
+
+.old {
+    text-decoration: line-through;
+    color: #777;
+    margin-right: 8px;
+}
+
+/* HERO TEXT */
+
+.hero-text {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    font-size: 30px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.left-icons i,
+.right-icons i {
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #d8cbb5;
+    padding: 40px;
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}

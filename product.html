@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+
+    <link rel="stylesheet" href="css/product.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="navbar">
+
+            <div class="left-icons">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="logo" onclick="goToHome()">
+                SIVAN
+            </div>
+
+            <div class="right-icons">
+                <i class="far fa-user"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="product-container">
+        <div class="product-image">
+
+            <div class="slider">
+        
+                <img src="./image/main.jpg">
+                <img src="./image/_DSC9280-4.jpg">
+                <img src="./image/aura.jpg">
+                <img src="./image/lachak.jpg">
+                <img src="./image/lachak-1.jpg">
+        
+            </div>
+        
+        </div>
+        
+        <div class="dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
+        </div>
+
+        <!-- PRODUCT INFO -->
+        <div class="product-info">
+
+            <h2>The Mustard Yellow Chinon Saree</h2>
+
+            <div class="price">
+                <span class="old">₹1,999.00</span>
+                <span class="new">₹1,499.25</span>
+            </div>
+
+            <!-- COLOR -->
+            <div class="color-section">
+                <p>Color: Mustard Yellow *</p>
+                <div class="color-box"></div>
+            </div>
+
+            <!-- QUANTITY -->
+            <div class="qty-section">
+
+                <p>Quantity *</p>
+
+                <div class="qty-box">
+                    <button onclick="decrease()">-</button>
+                    <input id="qty" value="1">
+                    <button onclick="increase()">+</button>
+                </div>
+
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+
+                <button class="cart">
+                    Add to Cart
+                    <i class="far fa-heart"></i>
+                </button>
+
+                <button class="buy">
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="description">
+
+            <h3>Description</h3>
+
+            <ul>
+                <li>Soft, premium Chinon fabric</li>
+                <li>Cut piece lace</li>
+                <li>Unstitched blouse use with matching fabric</li>
+                <li>5.5 m width - 1.19 m</li>
+            </ul>
+
+        </div>
+
+
+        <!-- RETURN POLICY -->
+
+        <div class="policy">
+
+            <h3>Return and Refund Policy</h3>
+
+            <p>We want you to love your purchase! If for any reason you are not satisfied, we’re here to help.</p>
+
+            <ul>
+                <li>Products can be returned within 7 days</li>
+                <li>Items must be unused and in original packaging</li>
+                <li>Refund processed after inspection</li>
+            </ul>
+
+        </div>
+
+
+        <!-- DELIVERY -->
+
+        <div class="delivery">
+
+            <h3>Delivery Time</h3>
+
+            <p>Delivery typically takes <b>10–15 days</b>, depending on your location.</p>
+
+        </div>
+    </div>
+    <!-- FOOTER -->
+
+    <footer>
+
+        <ul>
+            <li>About us</li>
+            <li>Shipping Policy</li>
+            <li>Terms & Conditions</li>
+            <li>Contact us</li>
+            <li>Shipping Policy</li>
+        </ul>
+
+    </footer>
+
+    <script src="js/product.js"></script>
+
+</body>
+
+</html>
