@@ -12,5 +12,5 @@ videos.forEach(video => {
 });
 
 function goToCategory() {
-    window.location.href = "category.html";
+    window.location.href = "Category.html";
 }
