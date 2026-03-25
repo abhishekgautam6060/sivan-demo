@@ -155,3 +155,46 @@ function openOrders(){
 function goToLogin(){
     window.location.href = "login.html";
 }
+
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+
+    slides.forEach(slide => slide.classList.remove("active"));
+
+    slides[index].classList.add("active");
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// 🔥 AUTO SLIDE EVERY 3 SEC
+setInterval(nextSlide, 3000);
+
+
+function openInsta(){
+    window.open("https://www.instagram.com/sivan_jaipuri/", "_blank");
+}
+
+function openInsta1(){
+    window.open("https://www.instagram.com/reel/DVEJm44El3R/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
+}
+function openInsta2(){
+    window.open("https://www.instagram.com/reel/DVA_WOdjxoF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
+}
+function openInsta3(){
+    window.open("https://www.instagram.com/reel/DT9g9HAjxH4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
+}
+function openInsta4(){
+    window.open("https://www.instagram.com/reel/DT9jUWdkq6M/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
+}
+function openInsta5(){
+    window.open("https://www.instagram.com/reel/DSKdjIkkpXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
+}
+function openInst6(){
+    window.open("https://www.instagram.com/reel/DUtB1CTj9JG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
+}

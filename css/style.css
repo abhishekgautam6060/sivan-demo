@@ -14,26 +14,100 @@ body {
     font-size: 14px;
 }
 
-/* HERO */
-
+/* HERO FIX */
 .hero {
-    background: url("../image/main.jpg") center/cover no-repeat;
+    position: relative;
     height: 520px;
-    color: white;
+    overflow: hidden;
+}
+
+/* SLIDES CONTAINER */
+.slides {
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 
+/* EACH SLIDE */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* IMAGE */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+* FIX NAVBAR ABOVE SLIDER */
+.navbar {
+    position: relative;
+    z-index: 10;
+}
+
+/* HERO TEXT ABOVE */
+.hero-text {
+    position: absolute;
+    z-index: 10;
+}
+
+/* SLIDES BELOW */
+.slides {
+    z-index: 0;
+}
+
+.slide {
+    z-index: 0;
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none; /* 🔥 THIS FIXES EVERYTHING */
+}
 /* NAVBAR */
 
 .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    font-size: 20px;
+
+    padding: 15px 15px;
+
+    z-index: 10;
+    color: white;
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 10;
+    color: white;
 }
 
 .logo {
+    color: white;
+    font-weight: bold;
     font-size: 22px;
     font-weight: 500;
 }
@@ -46,6 +120,7 @@ body {
 
 .right-icons {
     display: flex;
+    margin-right: 30px; /* 🔥 move slightly left */
 }
 
 .cart-icon {
@@ -246,7 +321,7 @@ body {
 
 .insta-gallery img {
     width: 100%;
-    height: 140px;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -391,6 +466,7 @@ footer li {
 
 
 .hamburger span {
+    background: white;
     transition: 0.3s;
 }
 

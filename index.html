@@ -22,20 +22,20 @@
                     <p id="loginSection" onclick="goToLogin()">Login</p>
                 </div>
             </div>
-    
+
             <span class="close-btn" onclick="closeSidebar()">✕</span>
         </div>
-    
+
         <!-- MENU -->
         <div class="menu">
-    
+
             <p class="menu-title">SHOP IN</p>
-    
+
             <div class="menu-item" onclick="gotToNewCollection()">
                 <div class="icon"><i class="fas fa-tshirt"></i></div>
                 New Collection
             </div>
-    
+
             <div class="menu-item" onclick="gotToBestSeller()">
                 <div class="icon"><i class="fas fa-star"></i></div>
                 Best Sellers
@@ -45,26 +45,26 @@
                 <div class="icon"><i class="fas fa-star"></i></div>
                 All Collections
             </div>
-    
+
             <div class="menu-item" onclick="openOrders()">
                 <div class="icon"><i class="fas fa-box"></i></div>
                 Your Orders
             </div>
-    
+
             <div class="menu-item" onclick="openProfile()">
                 <div class="icon"><i class="fas fa-user"></i></div>
                 Profile
             </div>
-    
+
             <div class="menu-item logout" onclick="logout()">
                 <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
                 Logout
             </div>
-    
+
         </div>
-    
+
     </div>
-    
+
     <!-- OVERLAY -->
     <div id="overlay" onclick="closeSidebar()"></div>
     <!-- TOP BAR -->
@@ -72,7 +72,27 @@
         Welcome to Sivan
     </div>
     <!-- HERO SECTION -->
-    <section class="hero" onclick="goToCategory()">
+    <section class="hero">
+        <!-- SLIDES -->
+        <div class="slides">
+
+            <div class="slide active">
+                <img src="./image/daftar-badiee-Mul-Cotton/1.png" onclick="goToCategory4()">
+            </div>
+
+            <div class="slide">
+                <img src="./image/rust-orange-chinon/5.png" onclick="goToCategory1()">
+            </div>
+
+            <div class="slide">
+                <img src="./image/lachak-Georgette Glass/1.png" onclick="goToCategory2()">
+            </div>
+
+            <div class="slide">
+                <img src="./image/khawab-Champagne gold/1.png" onclick="goToCategory3()">
+            </div>
+
+        </div>
         <div class="navbar">
             <div class="left-icons">
                 <div class="hamburger" onclick="event.stopPropagation(); openSidebar();">
@@ -171,7 +191,8 @@
 
                 <p>
                     At SIVAN, we don’t just create sarees — we craft stories of tradition, grace, and timeless beauty.
-                    Every piece is thoughtfully designed to celebrate the modern Indian woman while staying rooted in heritage. From fabric selection to final drape, we ensure elegance in every detail.
+                    Every piece is thoughtfully designed to celebrate the modern Indian woman while staying rooted in
+                    heritage. From fabric selection to final drape, we ensure elegance in every detail.
                     Because when you wear SIVAN, you don’t just dress up — you express yourself.
                 </p>
 
@@ -188,12 +209,12 @@
 
     <section class="follow">
 
-    <h3>Follow us on</h3>
+        <h3>Follow us on</h3>
 
-    <div class="social-icons">
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook"></i>
-    </div>
+        <div class="social-icons">
+            <i class="fab fa-instagram" onclick="openInsta()"></i>
+            <i class="fab fa-facebook"></i>
+        </div>
 
     </section>
 
@@ -202,12 +223,12 @@
 
     <section class="insta-gallery">
 
-        <img src="./image/footer/i-1.png">
-        <img src="./image/footer/i-2.png">
-        <img src="./image/footer/i-3.png">
-        <img src="./image/footer/i-1.png">
-        <img src="./image/footer/i-2.png">
-        <img src="./image/footer/i-3.png">
+        <img src="./image/footer/i-1.png" onclick="openInsta1()">
+        <img src="./image/footer/i-2.png" onclick="openInsta2()">
+        <img src="./image/footer/i-3.png" onclick="openInsta3()">
+        <img src="./image/footer/i-4.png" onclick="openInsta4()">
+        <img src="./image/footer/i-6.png" onclick="openInsta5()">
+        <img src="./image/footer/i-7.png" onclick="openInsta6()">
 
     </section>
 
