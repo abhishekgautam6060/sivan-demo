@@ -4,6 +4,51 @@ const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const container = document.getElementById("orderItems");
 
+// ✅ PHONE (10 digits)
+function isValidPhone(phone) {
+    return /^[0-9]{10}$/.test(phone);
+}
+
+// ✅ PINCODE (6 digits)
+function isValidPincode(pincode) {
+    return /^[0-9]{6}$/.test(pincode);
+}
+
+
+function validateCustomerDetails() {
+
+    const phone = document.getElementById("phone").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const state = document.getElementById("state").value.trim();
+    const area = document.getElementById("area").value.trim();
+    const pincode = document.getElementById("pincode").value.trim();
+
+    if (!isValidPhone(phone)) {
+        alert("Phone must be 10 digits ❌");
+        return false;
+    }
+
+    if (address.length < 5) {
+        alert("Enter proper address ❌");
+        return false;
+    }
+
+    if (state.length < 4) {
+        alert("Enter valid state ❌");
+        return false;
+    }
+    if (area.length < 4) {
+        alert("Enter valid Local Area ❌");
+        return false;
+    }
+
+    if (!isValidPincode(pincode)) {
+        alert("Pincode must be 6 digits ❌");
+        return false;
+    }
+
+    return true;
+}
 
 let total = 0;
 cart.forEach(item => {
@@ -30,12 +75,13 @@ cart.forEach(item => {
 
 
 
-
 document.getElementById("totalAmount").innerText = total.toFixed(2);
 
 
 
 async function placeOrder() {
+
+    if (!validateCustomerDetails()) return; // 🔥 STOP if invalid
 
     const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
 
@@ -181,6 +227,9 @@ function openOrders() {
     }
 }
 
+function goToCart() {
+    window.location.href = "cart.html";
+}
 
 function goToHome() {
     window.location.href = "index.html";
@@ -217,6 +266,22 @@ function goToLogin(){
 window.onload = function () {
     updateCartCount();
     updateUserUI();
+
+    const email = localStorage.getItem("userEmail");
+
+    console.log("User Email:", email); // Debugging line to check the email value
+
+    const emailInput = document.getElementById("email");
+
+    if (email) {
+        emailInput.value = email;
+
+        // 🔥 LOCK FIELD
+        emailInput.readOnly = true;
+        emailInput.style.background = "#eee";
+    } else {
+        emailInput.readOnly = false;
+    };
 };
 
 
@@ -236,3 +301,5 @@ function updateCartCount() {
         cartCount.innerText = totalQty;
     }
 }
+
+

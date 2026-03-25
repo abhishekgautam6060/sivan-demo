@@ -1,6 +1,51 @@
 const API = "https://sivan-backend-demo-production.up.railway.app";
 
+
+// ✅ EMAIL VALIDATION
+function isValidEmail(email) {
+    return /^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email);
+}
+
+// ✅ PHONE VALIDATION (10 digits)
+function isValidPhone(phone) {
+    return /^[0-9]{10}$/.test(phone);
+}
+
+// ✅ PASSWORD VALIDATION
+function isValidPassword(password) {
+    return password.length >= 6;
+}
+
+
+function validateForm() {
+    
+
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const password = document.getElementById("password").value;
+
+    if (!isValidEmail(email)) {
+        alert("Enter valid Gmail address ❌");
+        return false;
+    }
+
+    if (!isValidPhone(phone)) {
+        alert("Phone number must be 10 digits ❌");
+        return false;
+    }
+
+    if (!isValidPassword(password)) {
+        alert("Password must be at least 6 characters ❌");
+        return false;
+    }
+
+    return true;
+}
+
+
 async function signup() {
+
+    if (!validateForm()) return;
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -26,6 +71,7 @@ async function signup() {
 
 async function login() {
 
+    if (!validateForm()) return;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 

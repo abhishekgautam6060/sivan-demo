@@ -10,6 +10,11 @@
     margin-bottom: 10px;
 }
 
+#state {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 .order-item {
     display: flex;
     gap: 10px;

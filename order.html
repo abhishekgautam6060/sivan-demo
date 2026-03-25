@@ -99,12 +99,38 @@
     <h2>Delivery Details</h2>
 
     <div class="form">
-        <input id="email" placeholder="Email">
-        <input id="phone" placeholder="Phone Number">
-        <input id="address" placeholder="Address">
+
+        <input id="email" type="email" placeholder="Email">
+    
+        <input id="phone" type="tel" placeholder="Phone Number" maxlength="10"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+    
+        <input id="address" placeholder="Address" minlength="5">
+    
         <input id="area" placeholder="Local Area">
-        <input id="state" placeholder="State">
-        <input id="pincode" placeholder="Pincode">
+    
+        <select id="state">
+            <option value="">Select State</option>
+            <option>Rajasthan</option>
+            <option>Maharashtra</option>
+            <option>Delhi</option>
+            <option>Uttar Pradesh</option>
+            <option>Gujarat</option>
+            <option>Punjab</option>
+            <option>Haryana</option>
+            <option>Madhya Pradesh</option>
+            <option>Bihar</option>
+            <option>West Bengal</option>
+            <option>Karnataka</option>
+            <option>Tamil Nadu</option>
+            <option>Kerala</option>
+            <option>Andhra Pradesh</option>
+            <option>Telangana</option>
+        </select>
+        
+        <input id="pincode" placeholder="Pincode" maxlength="6"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+    
     </div>
 
     <!-- PRODUCTS -->

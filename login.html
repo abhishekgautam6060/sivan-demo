@@ -24,14 +24,23 @@
             <p class="subtitle">Join Sivan family ✨</p>
         
             <!-- EMAIL -->
-            <input id="email" placeholder="Enter Email">
+            <input id="email" type="email" placeholder="Enter Email">
         
             <!-- PASSWORD -->
             <input id="password" type="password" placeholder="Enter Password">
         
             <!-- PHONE (ONLY FOR SIGNUP) -->
             <div id="phoneSection" style="display:none;">
-                <input id="phone" placeholder="Enter Phone Number">
+                <div class="phone-box">
+                    <select id="countryCode">
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+971">🇦🇪 +971</option>
+                    </select>
+                
+                    <input id="phone" type="tel" placeholder="Enter Phone Number">
+                </div>
             </div>
         
             <!-- MAIN BUTTON -->
