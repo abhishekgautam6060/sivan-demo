@@ -1,3 +1,4 @@
+
 const videos = document.querySelectorAll(".watch-video");
 
 videos.forEach(video => {

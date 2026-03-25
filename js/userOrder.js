@@ -1,3 +1,5 @@
+const API = "https://sivan-backend-demo-production.up.railway.app";
+
 async function loadOrders() {
 
     const email = localStorage.getItem("userEmail");
@@ -8,7 +10,7 @@ async function loadOrders() {
         return;
     }
 
-    const response = await fetch(`http://localhost:8080/api/orders/user-orders?email=${email}`);
+    const response = await fetch(API + `/api/orders/user-orders?email=${email}`);
 
     const orders = await response.json();
     console.log(orders);

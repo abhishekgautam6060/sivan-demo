@@ -1,10 +1,12 @@
+const API = "https://sivan-backend-demo-production.up.railway.app";
+
 async function signup() {
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const phone = document.getElementById("phone").value;
 
-    const response = await fetch("http://localhost:8080/api/auth/signup", {
+    const response = await fetch(API + "/api/auth/signup", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -27,7 +29,7 @@ async function login() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const response = await fetch("http://localhost:8080/api/auth/login", {
+    const response = await fetch(API+ "/api/auth/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

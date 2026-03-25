@@ -1,3 +1,5 @@
+const API = "https://sivan-backend-demo-production.up.railway.app";
+
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const container = document.getElementById("orderItems");
@@ -58,7 +60,7 @@ async function placeOrder() {
     // 🟡 COD FLOW
     if (paymentMethod === "cod") {
 
-        await fetch("http://localhost:8080/api/orders", {
+        await fetch(API+ "/api/orders", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(orderData)
@@ -73,7 +75,7 @@ async function placeOrder() {
     // 🔵 ONLINE PAYMENT FLOW
 
     // 1. Create Razorpay order
-    const res = await fetch("http://localhost:8080/api/orders/create-payment", {
+    const res = await fetch(API + "/api/orders/create-payment", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ amount: total })
@@ -94,7 +96,7 @@ async function placeOrder() {
             console.log("Payment Success:", response);
 
             // Save order after payment success
-            await fetch("http://localhost:8080/api/orders", {
+            await fetch(API+ "http://localhost:8080/api/orders", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(orderData)
