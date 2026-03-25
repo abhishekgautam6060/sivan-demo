@@ -156,8 +156,15 @@ body {
 
 .featured-card {
     position: relative;
-    width: 180px;
+    width: 180px;   
     text-align: center;
+}
+
+.collection-card{
+    width: 100%;
+    height: 240px;              /* 🔥 FIXED HEIGHT */
+    object-fit: cover;          /* 🔥 MAINTAIN RATIO */
+    border-radius: 25px;
 }
 
 .featured-card img {

@@ -1,5 +1,5 @@
 function goToHome(){
-    window.location.href = "../index.html";
+    window.location.href = "index.html";
 }
 
 function goToProduct1(){
@@ -56,7 +56,7 @@ function updateCartCount() {
 }
 
 function goToCart() {
-    window.location.href = "../cart.html";
+    window.location.href = "cart.html";
 }
 
 
@@ -122,21 +122,36 @@ function logout() {
 }
 
 function gotToNewCollection(){
-    window.location.href = "../category/cat-daftar.html";
+    window.location.href = "category/cat-daftar.html";
 }
 
 function gotToBestSeller(){
-    window.location.href = "../category/cat-khawab.html";
+    window.location.href = "category/cat-khawab.html";
 }
 
 function gotToAllCollections(){
-    window.location.href = "../category/cat-Aura.html";
+    window.location.href = "category.html";
 }
 
 function openOrders(){
-    window.location.href = "../UserOrders.html";
+    window.location.href = "UserOrders.html";
 }
 
 function goToLogin(){
-    window.location.href = "../login.html";
+    window.location.href = "login.html";
+}
+
+
+function goToCategory1(){
+    window.location.href = "category/cat-Aura.html";    
+}
+function goToCategory2(){
+    window.location.href = "category/cat-lachak.html";
+}
+function goToCategory3(){
+    window.location.href = "category/cat-khawab.html";
+    
+}
+function goToCategory4(){    
+    window.location.href = "category/cat-daftar.html";
 }

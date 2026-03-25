@@ -1,16 +1,36 @@
-
 const videos = document.querySelectorAll(".watch-video");
 
 videos.forEach(video => {
-    video.addEventListener("click", () => {
 
-        if (video.paused) {
-            video.play();
-        } else {
-            video.pause();
-        }
-    });
+    // 🔥 AUTO PLAY WHEN VISIBLE
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play().catch(() => {});
+            } else {
+                video.pause();
+            }
+        });
+    }, { threshold: 0.6 });
+
+    observer.observe(video);
+
 });
+
+
+// const videos = document.querySelectorAll(".watch-video");
+
+// videos.forEach(video => {
+//     video.addEventListener("click", () => {
+
+//         if (video.paused) {
+//             video.play();
+//         } else {
+//             video.pause();
+//         }
+//     });
+// });
+
 
 window.onload = function () {
     updateCartCount();
@@ -125,7 +145,7 @@ function gotToBestSeller(){
 }
 
 function gotToAllCollections(){
-    window.location.href = "category/cat-Aura.html";
+    window.location.href = "category.html";
 }
 
 function openOrders(){
