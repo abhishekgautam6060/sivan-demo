@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <!-- HEADER -->
+        <div class="sidebar-header">
+            <div class="user-info">
+                <div class="user-icon">
+                    <i class="far fa-user"></i>
+                </div>
+                <div>
+                    <h3 id="profileName">Hey There!</h3>
+                    <p id="loginSection" onclick="goToLogin()">Login</p>
+                </div>
+            </div>
+    
+            <span class="close-btn" onclick="closeSidebar()">✕</span>
+        </div>
+    
+        <!-- MENU -->
+        <div class="menu">
+    
+            <p class="menu-title">SHOP IN</p>
+    
+            <div class="menu-item" onclick="gotToNewCollection()">
+                <div class="icon"><i class="fas fa-tshirt"></i></div>
+                New Collection
+            </div>
+    
+            <div class="menu-item" onclick="gotToBestSeller()">
+                <div class="icon"><i class="fas fa-star"></i></div>
+                Best Sellers
+            </div>
+
+            <div class="menu-item" onclick="gotToAllCollections()">
+                <div class="icon"><i class="fas fa-star"></i></div>
+                All Collections
+            </div>
+    
+            <div class="menu-item" onclick="openOrders()">
+                <div class="icon"><i class="fas fa-box"></i></div>
+                Your Orders
+            </div>
+    
+            <div class="menu-item" onclick="openProfile()">
+                <div class="icon"><i class="fas fa-user"></i></div>
+                Profile
+            </div>
+    
+            <div class="menu-item logout" onclick="logout()">
+                <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
+                Logout
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    <!-- OVERLAY -->
+    <div id="overlay" onclick="closeSidebar()"></div>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        Welcome to Sivan
+    </div>
+    <!-- HERO SECTION -->
+    <section class="hero" onclick="goToCategory()">
+        <div class="navbar">
+            <div class="left-icons">
+                <div class="hamburger" onclick="event.stopPropagation(); openSidebar();">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="logo" onclick="goToHome()">
+                SIVAN
+            </div>
+            <div class="right-icons">
+                <div class="cart-icon" onclick="goToCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cartCount" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- CART SECTION -->
+<div class="cart-container">
+
+    <h2>Your Cart</h2>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-summary">
+        <h3>Total: ₹<span id="totalAmount">0</span></h3>
+        <button onclick="goToOrder()">Proceed to Checkout</button>
+    </div>
+
+</div>
+
+<!-- FOOTER SAME -->
+<footer>
+    <ul>
+        <li>About us</li>
+        <li>Shipping Policy</li>
+        <li>Terms & Conditions</li>
+        <li>Contact us</li>
+    </ul>
+</footer>
+
+<script src="js/cart.js"></script>
+</body>
+</html>

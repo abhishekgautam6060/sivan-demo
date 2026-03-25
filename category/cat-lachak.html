@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Aura Collection</title>
+
+    <link rel="stylesheet" href="../css/category.css">
+
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar">
+        <!-- HEADER -->
+        <div class="sidebar-header">
+            <div class="user-info">
+                <div class="user-icon">
+                    <i class="far fa-user"></i>
+                </div>
+                <div>
+                    <h3 id="profileName">Hey There!</h3>
+                    <p id="loginSection" onclick="goToLogin()">Login</p>
+                </div>
+            </div>
+
+            <span class="close-btn" onclick="closeSidebar()">✕</span>
+        </div>
+
+        <!-- MENU -->
+        <div class="menu">
+
+            <p class="menu-title">SHOP IN</p>
+
+            <div class="menu-item" onclick="gotToNewCollection()">
+                <div class="icon"><i class="fas fa-tshirt"></i></div>
+                New Collection
+            </div>
+
+            <div class="menu-item" onclick="gotToBestSeller()">
+                <div class="icon"><i class="fas fa-star"></i></div>
+                Best Sellers
+            </div>
+
+            <div class="menu-item" onclick="gotToAllCollections()">
+                <div class="icon"><i class="fas fa-star"></i></div>
+                All Collections
+            </div>
+
+            <div class="menu-item" onclick="openOrders()">
+                <div class="icon"><i class="fas fa-box"></i></div>
+                Your Orders
+            </div>
+
+            <div class="menu-item" onclick="openProfile()">
+                <div class="icon"><i class="fas fa-user"></i></div>
+                Profile
+            </div>
+
+            <div class="menu-item logout" onclick="logout()">
+                <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
+                Logout
+            </div>
+        </div>
+    </div>
+
+    <!-- OVERLAY -->
+    <div id="overlay" onclick="closeSidebar()"></div>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        Welcome to Sivan
+    </div>
+    <!-- HERO SECTION -->
+    <section class="hero" onclick="goToCategory()">
+        <div class="navbar">
+            <div class="left-icons">
+                <div class="hamburger" onclick="event.stopPropagation(); openSidebar();">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="logo" onclick="goToHome()">
+                SIVAN
+            </div>
+            <div class="right-icons">
+                <div class="cart-icon" onclick="goToCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cartCount" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="category-container">
+        <!-- TITLE -->
+
+        <h1 class="category-title">LACHAK</h1>
+
+
+        <!-- PRODUCT COUNT + FILTER -->
+
+        <div class="category-top">
+
+            <p>2 products</p>
+
+            <p class="filter">Filter & Sort</p>
+
+        </div>
+
+
+        <!-- PRODUCT LIST -->
+
+        <div class="product-list">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card" onclick="goToProduct1()">
+
+                <div class="product-img">
+
+                    <img src="../image/lachak-Georgette Glass/1.png">
+
+                    <span class="discount">10% OFF</span>
+
+                </div>
+
+                <h3>Georgette Glass Work Saree with Blouse</h3>
+
+                <p class="price">
+                    <span class="old">₹2,499.00</span>
+                    ₹2,299.00
+                </p>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card" onclick="goToProduct2()">
+
+                <div class="product-img">
+
+                    <img src="../image/lachak-Premium Tissue Silk/1.png">
+
+                    <span class="discount">10% OFF</span>
+
+                </div>
+
+                <h3>Premium Tissue Silk</h3>
+
+                <p class="price">
+
+                    <span class="old">₹1,999.00</span>
+
+                    ₹1,799.00
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <ul>
+            <li>About us</li>
+            <li>Shipping Policy</li>
+            <li>Terms & Conditions</li>
+            <li>Contact us</li>
+            <li>Shipping Policy</li>
+        </ul>
+
+    </footer>
+    <script src="../js/category.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+
+    <link rel="stylesheet" href="../css/product.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar">
+        <!-- HEADER -->
+        <div class="sidebar-header">
+            <div class="user-info">
+                <div class="user-icon">
+                    <i class="far fa-user"></i>
+                </div>
+                <div>
+                    <h3 id="profileName">Hey There!</h3>
+                    <p id="loginSection" onclick="goToLogin()">Login</p>
+                </div>
+            </div>
+    
+            <span class="close-btn" onclick="closeSidebar()">✕</span>
+        </div>
+    
+        <!-- MENU -->
+        <div class="menu">
+    
+            <p class="menu-title">SHOP IN</p>
+    
+            <div class="menu-item" onclick="gotToNewCollection()">
+                <div class="icon"><i class="fas fa-tshirt"></i></div>
+                New Collection
+            </div>
+    
+            <div class="menu-item" onclick="gotToBestSeller()">
+                <div class="icon"><i class="fas fa-star"></i></div>
+                Best Sellers
+            </div>
+
+            <div class="menu-item" onclick="gotToAllCollections()">
+                <div class="icon"><i class="fas fa-star"></i></div>
+                All Collections
+            </div>
+    
+            <div class="menu-item" onclick="openOrders()">
+                <div class="icon"><i class="fas fa-box"></i></div>
+                Your Orders
+            </div>
+    
+            <div class="menu-item" onclick="openProfile()">
+                <div class="icon"><i class="fas fa-user"></i></div>
+                Profile
+            </div>
+    
+            <div class="menu-item logout" onclick="logout()">
+                <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
+                Logout
+            </div>
+        </div>
+    </div>
+     
+    <!-- OVERLAY -->
+    <div id="overlay" onclick="closeSidebar()"></div>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        Welcome to Sivan
+    </div>
+    <!-- HERO SECTION -->
+    <section class="hero" onclick="goToCategory()">
+        <div class="navbar">
+            <div class="left-icons">
+                <div class="hamburger" onclick="event.stopPropagation(); openSidebar();">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="logo" onclick="goToHome()">
+                SIVAN
+            </div>
+            <div class="right-icons">
+                <div class="cart-icon" onclick="goToCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cartCount" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="product-container">
+        <div class="product-image">
+            <div class="slider">
+                <img src="../image/khawab-Dark purple /1.png">
+                <img src="../image/khawab-Dark purple /2.png">
+                <img src="../image/khawab-Dark purple /3.png">
+                <img src="../image/khawab-Dark purple /4.png">
+                <img src="../image/khawab-Dark purple /5.png">
+                <img src="../image/khawab-Dark purple /6.png">
+            </div>
+        
+        </div>
+        
+        <div class="dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
+            <span class="dot" onclick="goToSlide(5)"></span>
+        </div>
+
+        <!-- PRODUCT INFO -->
+        <div class="product-info">
+
+            <h2> Dark purple Chinon saree </h2>
+
+            <div class="price">
+                <span class="new">₹1,699.00</span>
+            </div>
+
+            <!-- COLOR -->
+            <div class="color-section">
+                <p>Color: Purple *</p>
+                <div class="color-box"></div>
+            </div>
+
+            <!-- QUANTITY -->
+            <div class="qty-section">
+
+                <p>Quantity *</p>
+
+                <div class="qty-box">
+                    <button onclick="decrease()">-</button>
+                    <input id="qty" value="1">
+                    <button onclick="increase()">+</button>
+                </div>
+
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+
+                <button class="cart" onclick="addToCart()">
+                    Add to Cart
+                    <i class="far fa-heart"></i>
+                </button>
+                <button class="buy" onclick="addToCart()">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+        <!-- DESCRIPTION -->
+        <div class="description">
+            <h3>Description</h3>
+            <ul>
+                <li>Fabric : Premium Pure Chinon – soft, lightweight & flowy</li>
+                <li>Border : Elegant Gota Lace detailing</li>
+                <li>Blouse : Unstitched blouse fabric in matching pure chinon</li>
+                <li>Saree Length - 5.5 Meter</li>
+                <li>Care Instruction - Dry Clean Only</li>            
+            </ul>
+
+        </div>
+
+
+        <!-- RETURN POLICY -->
+
+        <div class="policy">
+
+            <h3>Return and Refund Policy</h3>
+
+            <p>We want you to love your purchase! If for any reason you are not satisfied, we’re here to help.</p>
+
+            <ul>
+                <li>Products can be returned within 7 days</li>
+                <li>Items must be unused and in original packaging</li>
+                <li>Refund processed after inspection</li>
+            </ul>
+
+        </div>
+
+
+        <!-- DELIVERY -->
+
+        <div class="delivery">
+
+            <h3>Delivery Time</h3>
+
+            <p>Delivery typically takes <b>10–15 days</b>, depending on your location.</p>
+
+        </div>
+    </div>
+    <!-- FOOTER -->
+
+    <footer>
+
+        <ul>
+            <li>About us</li>
+            <li>Shipping Policy</li>
+            <li>Terms & Conditions</li>
+            <li>Contact us</li>
+            <li>Shipping Policy</li>
+        </ul>
+
+    </footer>
+
+    <script src="../js/product.js"></script>
+
+</body>
+
+</html>

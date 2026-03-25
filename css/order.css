@@ -1,0 +1,31 @@
+.order-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+.form input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.order-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.order-item img {
+    width: 70px;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #5a5048;
+    color: white;
+    border: none;
+    margin-top: 20px;
+}

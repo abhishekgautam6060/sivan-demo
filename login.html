@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivan Store</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- TOP IMAGE BANNER -->
+    <div class="login-banner">
+        <img src="image/rust-orange-chinon/5.png" alt="banner">
+        <div class="back-btn" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+    </div>
+    
+    <!-- LOGIN CARD -->
+    <div class="login-card">        
+
+            <h2 id="formTitle">Login</h2>
+            <p class="subtitle">Join Sivan family ✨</p>
+        
+            <!-- EMAIL -->
+            <input id="email" placeholder="Enter Email">
+        
+            <!-- PASSWORD -->
+            <input id="password" type="password" placeholder="Enter Password">
+        
+            <!-- PHONE (ONLY FOR SIGNUP) -->
+            <div id="phoneSection" style="display:none;">
+                <input id="phone" placeholder="Enter Phone Number">
+            </div>
+        
+            <!-- MAIN BUTTON -->
+            <button id="mainBtn" onclick="handleAction()">Login</button>
+        
+            <!-- TOGGLE -->
+            <p class="toggle-text">
+                Don't have account?
+                <span onclick="switchToSignup()">Signup</span>
+            </p>
+    
+        <!-- OR -->
+        <div class="divider">
+            <span></span>
+            OR
+            <span></span>
+        </div>
+    
+        <!-- SOCIAL -->
+        <div class="social-login">
+            <button><i class="fab fa-google"></i> Google</button>
+            <button><i class="fab fa-facebook"></i> Facebook</button>
+        </div>
+    
+        <!-- TERMS -->
+        <p class="terms">
+            By continuing, you agree to Sivan's <b>T&C</b> and <b>Privacy Policy</b>
+        </p>
+    
+    </div>
+    <script src="js/login.js"></script>
+    </body>
+</html>

@@ -1,36 +1,72 @@
-function goToHome(){
-    window.location.href = "../index.html";
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartContainer = document.getElementById("cartItems");
+
+let total = 0;
+
+cartContainer.innerHTML = "";
+
+cart.forEach((item, index) => {
+
+    total += item.price * item.quantity;
+
+    const div = document.createElement("div");
+    div.classList.add("cart-item");
+
+    console.log(item.image);
+
+    div.innerHTML = `
+        <img src="${item.image}">
+
+        <div class="cart-details">
+            <h4>${item.name}</h4>
+            <p>₹${item.price}</p>
+            <p>Qty: ${item.quantity}</p>
+
+            <div class="cart-actions">
+                <button onclick="increaseQty(${index})">+</button>
+                <button onclick="decreaseQty(${index})">-</button>
+                <button onclick="removeItem(${index})">Remove</button>
+            </div>
+        </div>
+    `;
+
+    cartContainer.appendChild(div);
+});
+
+document.getElementById("totalAmount").innerText = total.toFixed(2);
+
+// 🔥 FUNCTIONS
+
+function increaseQty(index) {
+    cart[index].quantity++;
+    updateCart();
 }
 
-function goToProduct1(){
-    window.location.href = "../product/Georgette-Glass.html";
+function decreaseQty(index) {
+    if (cart[index].quantity > 1) {
+        cart[index].quantity--;
+    }
+    updateCart();
 }
 
-
-function goToProduct2(){
-    window.location.href = "../product/Premium-Tissue-Silk.html";
+function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
 }
 
-function goToProduct3(){
-    window.location.href = "../product/Champagne gold.html";
+function updateCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload();
 }
 
-
-function goToProduct4(){
-    window.location.href = "../product/Dark-purple-Chinon.html";
+function goToOrder() {
+    localStorage.setItem("order", JSON.stringify(cart));
+    window.location.href = "order.html";
 }
 
-function goToProduct5(){
-    window.location.href = "../product/Mul-cotton.html";
-}
-
-
-function goToProduct6(){
-    window.location.href = "../product/Mustard-chinon.html";
-}
-
-function goToProduct7(){
-    window.location.href = "../product/rust-chinon.html";
+function goToHome() {
+    window.location.href = "index.html";
 }
 
 window.onload = function () {
@@ -55,9 +91,6 @@ function updateCartCount() {
     }
 }
 
-function goToCart() {
-    window.location.href = "../cart.html";
-}
 
 
 function openSidebar() {
@@ -93,6 +126,7 @@ function updateUserUI() {
     }
 }
 
+
 function openProfile() {
     const email = localStorage.getItem("userEmail");
 
@@ -122,21 +156,22 @@ function logout() {
 }
 
 function gotToNewCollection(){
-    window.location.href = "../category/cat-daftar.html";
+    window.location.href = "category/cat-daftar.html";
 }
 
 function gotToBestSeller(){
-    window.location.href = "../category/cat-khawab.html";
+    window.location.href = "category/cat-khawab.html";
 }
 
 function gotToAllCollections(){
-    window.location.href = "../category/cat-Aura.html";
+    window.location.href = "category/cat-Aura.html";
 }
 
 function openOrders(){
-    window.location.href = "../UserOrders.html";
+    window.location.href = "UserOrders.html";
 }
 
 function goToLogin(){
-    window.location.href = "../login.html";
+    window.location.href = "login.html";
+    
 }
