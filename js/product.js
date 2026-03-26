@@ -31,23 +31,6 @@ function changeImage(index) {
 
 }
 
-
-let currentSlide = 0;
-
-const slider = document.querySelector(".slider");
-const dots = document.querySelectorAll(".dot");
-
-function goToSlide(index) {
-
-    currentSlide = index;
-
-    slider.style.transform = `translateX(-${index * 100}%)`;
-
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-
-}
-
 function goToHome() {
     window.location.href = "../index.html";
 }
@@ -216,4 +199,29 @@ function openOrders(){
 
 function goToLogin(){
     window.location.href = "../login.html";
+}
+
+
+const slider = document.getElementById("product-slider");
+const dots = document.querySelectorAll(".dot");
+
+slider.addEventListener("scroll", () => {
+    const scrollLeft = slider.scrollLeft;
+    const width = slider.clientWidth;
+
+    const index = Math.round(scrollLeft / width);
+
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    if (dots[index]) {
+        dots[index].classList.add("active");
+    }
+});
+
+function goToSlide(index) {
+
+    slider.scrollTo({
+        left: index * slider.clientWidth,
+        behavior: "smooth"
+    });
 }

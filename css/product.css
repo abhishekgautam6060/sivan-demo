@@ -68,11 +68,53 @@ body {
     margin: 15px 0;
 }
 
-.color-box {
+.color-box-1{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #e1b400;
+    background: #e100774f;
+    border: 2px solid #444;
+}
+.color-box-2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e9180be6;
+    border: 2px solid #444;
+}
+.color-box-3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e8c402f0;
+    border: 2px solid #444;
+}
+.color-box-4 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #5455552e;
+    border: 2px solid #444;
+}
+.color-box-5 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e1520000;
+    border: 2px solid #444;
+}
+.color-box-6 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #260040f2;
+    border: 2px solid #444;
+}
+.color-box-7 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #8280805e;
     border: 2px solid #444;
 }
 
@@ -407,4 +449,41 @@ footer li {
     height: 2px;
     background: rgb(0, 0, 0); /* change to black if needed */
     display: block;
+}
+
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch; /* 🔥 iPhone smooth */
+}
+
+.slider img {
+    min-width: 100%;
+    height: auto;
+    scroll-snap-align: start;
+    border-radius: 20px;
+}
+
+/* Hide scrollbar */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: black;
+    transform: scale(1.2);
 }
