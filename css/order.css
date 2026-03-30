@@ -1,36 +1,124 @@
 .order-container {
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
 }
 
 .form input {
-    width: 95%;
-    padding: 10px;
-    margin-bottom: 10px;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 #state {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 .order-item {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
 .order-item img {
-    width: 70px;
-    border-radius: 10px;
+  width: 70px;
+  border-radius: 10px;
 }
 
 button {
+  width: 100%;
+  padding: 12px;
+  background: #5a5048;
+  color: white;
+  border: none;
+  margin-top: 20px;
+}
+
+/* .left-section {
+  display: none;
+} */
+/* .desktop-menu {
+  display: none;
+} */
+/* .right-section {
+  display: none;
+} */
+
+@media (min-width: 1024px) {
+  /* 🔥 MAIN LAYOUT */
+  .order-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+  }
+
+  /* LEFT SIDE */
+  .form {
+    grid-column: 1;
+  }
+
+  .order-container h2:first-of-type {
+    grid-column: 1;
+  }
+
+  /* 🔥 RIGHT SIDE CLEAN */
+  .order-summary {
+    grid-column: 2;
+    align-self: start;
+
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  /* ORDER ITEMS */
+  .order-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+  }
+
+  .order-item img {
+    width: 70px;
+    border-radius: 10px;
+  }
+
+  /* TOTAL */
+  .order-summary h3 {
+    margin-top: 20px;
+  }
+
+  /* PAYMENT */
+  .order-summary label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* BUTTON */
+  .order-summary button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
+    margin-top: 20px;
     background: #5a5048;
     color: white;
-    border: none;
-    margin-top: 20px;
+    border-radius: 8px;
+  }
+
+  /* FORM */
+  .form input,
+  #state {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+  }
 }

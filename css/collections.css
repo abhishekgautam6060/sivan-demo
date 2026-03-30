@@ -1,42 +1,115 @@
 /* TITLE */
 .page-title {
-    text-align: center;
-    margin: 20px 0;
+  text-align: center;
+  margin: 20px 0;
 }
 
 /* GRID */
 .collections-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 🔥 2 per row */
-    gap: 15px;
-    padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 🔥 2 per row */
+  gap: 15px;
+  padding: 15px;
 }
 
 /* BOX */
 .collection-box {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGE */
+.collection-box img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 🔥 PERFECT SQUARE */
+  object-fit: cover;
+}
+
+/* TEXT */
+.collection-box p {
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* HOVER */
+.collection-box:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   DESKTOP CSS
+   ========================= */
+/* =========================
+   DESKTOP CSS
+   ========================= */
+/* =========================
+   DESKTOP CSS
+   ========================= */
+/* =========================
+   DESKTOP CSS
+   ========================= */
+/* =========================
+   DESKTOP CSS
+   ========================= */
+/* =========================
+   DESKTOP CSS
+   ========================= */
+/* =========================
+   DESKTOP CSS
+   ========================= */
+/* =========================
+   DESKTOP CSS
+   ========================= */
+/* =========================
+   DESKTOP CSS
+   ========================= */
+
+@media (min-width: 1024px) {
+  /* TITLE */
+  .page-title {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  /* GRID */
+  .collections-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 🔥 2 per row */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  /* BOX */
+  .collection-box {
     background: white;
     border-radius: 15px;
     overflow: hidden;
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
 
-/* IMAGE */
-.collection-box img {
+  /* IMAGE */
+  .collection-box img {
     width: 100%;
-    aspect-ratio: 1 / 1;   /* 🔥 PERFECT SQUARE */
+    aspect-ratio: 1 / 1; /* 🔥 PERFECT SQUARE */
     object-fit: cover;
-}
+  }
 
-/* TEXT */
-.collection-box p {
+  /* TEXT */
+  .collection-box p {
     padding: 10px;
     font-weight: bold;
-}
+  }
 
-/* HOVER */
-.collection-box:hover {
+  /* HOVER */
+  .collection-box:hover {
     transform: scale(1.03);
+  }
 }

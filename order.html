@@ -1,168 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
-    <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="css/order.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/order.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div id="sidebar" class="sidebar">
-        <!-- HEADER -->
-        <div class="sidebar-header">
-            <div class="user-info">
-                <div class="user-icon">
-                    <i class="far fa-user"></i>
-                </div>
-                <div>
-                    <h3 id="profileName">Hey There!</h3>
-                    <p id="loginSection" onclick="goToLogin()">Login</p>
-                </div>
-            </div>
-    
-            <span class="close-btn" onclick="closeSidebar()">✕</span>
+      <!-- HEADER -->
+      <div class="sidebar-header">
+        <div class="user-info">
+          <div class="user-icon">
+            <i class="far fa-user"></i>
+          </div>
+          <div>
+            <h3 id="profileName">Hey There!</h3>
+            <p id="loginSection" onclick="goToLogin()">Login</p>
+          </div>
         </div>
-    
-        <!-- MENU -->
-        <div class="menu">
-    
-            <p class="menu-title">SHOP IN</p>
-    
-            <div class="menu-item" onclick="gotToNewCollection()">
-                <div class="icon"><i class="fas fa-tshirt"></i></div>
-                New Collection
-            </div>
-    
-            <div class="menu-item" onclick="gotToBestSeller()">
-                <div class="icon"><i class="fas fa-star"></i></div>
-                Best Sellers
-            </div>
 
-            <div class="menu-item" onclick="gotToAllCollections()">
-                <div class="icon"><i class="fas fa-star"></i></div>
-                All Collections
-            </div>
-    
-            <div class="menu-item" onclick="openOrders()">
-                <div class="icon"><i class="fas fa-box"></i></div>
-                Your Orders
-            </div>
-    
-            <div class="menu-item" onclick="openProfile()">
-                <div class="icon"><i class="fas fa-user"></i></div>
-                Profile
-            </div>
-    
-            <div class="menu-item logout" onclick="logout()">
-                <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
-                Logout
-            </div>
-    
+        <span class="close-btn" onclick="closeSidebar()">✕</span>
+      </div>
+
+      <!-- MENU -->
+      <div class="menu">
+        <p class="menu-title">SHOP IN</p>
+
+        <div class="menu-item" onclick="gotToNewCollection()">
+          <div class="icon"><i class="fas fa-tshirt"></i></div>
+          New Collection
         </div>
-    
+
+        <div class="menu-item" onclick="gotToBestSeller()">
+          <div class="icon"><i class="fas fa-star"></i></div>
+          Best Sellers
+        </div>
+
+        <div class="menu-item" onclick="gotToAllCollections()">
+          <div class="icon"><i class="fas fa-star"></i></div>
+          All Collections
+        </div>
+
+        <div class="menu-item" onclick="openOrders()">
+          <div class="icon"><i class="fas fa-box"></i></div>
+          Your Orders
+        </div>
+
+        <div class="menu-item" onclick="openProfile()">
+          <div class="icon"><i class="fas fa-user"></i></div>
+          Profile
+        </div>
+
+        <div class="menu-item logout" onclick="logout()">
+          <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
+          Logout
+        </div>
+      </div>
     </div>
-    
+
     <!-- OVERLAY -->
     <div id="overlay" onclick="closeSidebar()"></div>
     <!-- TOP BAR -->
-    <div class="top-bar">
-        Welcome to Sivan
-    </div>
+    <div class="top-bar">Welcome to Sivan</div>
     <!-- HERO SECTION -->
     <section class="hero" onclick="goToCategory()">
-        <div class="navbar">
-            <div class="left-icons">
-                <div class="hamburger" onclick="event.stopPropagation(); openSidebar();">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="logo" onclick="goToHome()">
-                SIVAN
-            </div>
-            <div class="right-icons">
-                <div class="cart-icon" onclick="goToCart()">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cartCount" id="cartCount">0</span>
-                </div>
-            </div>
+      <div class="navbar">
+        <div class="left-section" onclick="goToHome()">
+          <div class="logo">SIVAN</div>
         </div>
+
+        <div class="desktop-menu">
+          <span>All Collection</span>
+          <span>New Collection</span>
+          <span>Best Seller</span>
+        </div>
+
+        <div class="right-section">
+          <div class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+          <div class="profile-icon">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <div class="left-icons">
+          <div
+            class="hamburger"
+            onclick="event.stopPropagation(); openSidebar();"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="logo-nav">SIVAN</div>
+        <div class="right-icons">
+          <div class="cart-icon" onclick="event.stopPropagation(); goToCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cartCount" id="cartCount">0</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-<div class="order-container">
+    <div class="order-container">
+      <!-- CUSTOMER DETAILS -->
+      <h2>Delivery Details</h2>
 
-    <!-- CUSTOMER DETAILS -->
-    <h2>Delivery Details</h2>
+      <div class="form">
+        <input id="email" type="email" placeholder="Email" />
 
-    <div class="form">
+        <input
+          id="phone"
+          type="tel"
+          placeholder="Phone Number"
+          maxlength="10"
+          oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+        />
 
-        <input id="email" type="email" placeholder="Email">
-    
-        <input id="phone" type="tel" placeholder="Phone Number" maxlength="10"
-            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
-    
-        <input id="address" placeholder="Address" minlength="5">
-    
-        <input id="area" placeholder="Local Area">
-    
+        <input id="address" placeholder="Address" minlength="5" />
+
+        <input id="area" placeholder="Local Area" />
+
         <select id="state">
-            <option value="">Select State</option>
-            <option>Rajasthan</option>
-            <option>Maharashtra</option>
-            <option>Delhi</option>
-            <option>Uttar Pradesh</option>
-            <option>Gujarat</option>
-            <option>Punjab</option>
-            <option>Haryana</option>
-            <option>Madhya Pradesh</option>
-            <option>Bihar</option>
-            <option>West Bengal</option>
-            <option>Karnataka</option>
-            <option>Tamil Nadu</option>
-            <option>Kerala</option>
-            <option>Andhra Pradesh</option>
-            <option>Telangana</option>
+          <option value="">Select State</option>
+          <option>Rajasthan</option>
+          <option>Maharashtra</option>
+          <option>Delhi</option>
+          <option>Uttar Pradesh</option>
+          <option>Gujarat</option>
+          <option>Punjab</option>
+          <option>Haryana</option>
+          <option>Madhya Pradesh</option>
+          <option>Bihar</option>
+          <option>West Bengal</option>
+          <option>Karnataka</option>
+          <option>Tamil Nadu</option>
+          <option>Kerala</option>
+          <option>Andhra Pradesh</option>
+          <option>Telangana</option>
         </select>
-        
-        <input id="pincode" placeholder="Pincode" maxlength="6"
-            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
-    
+
+        <input
+          id="pincode"
+          placeholder="Pincode"
+          maxlength="6"
+          oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+        />
+      </div>
+
+      <div class="order-summary">
+        <h2>Your Order</h2>
+
+        <div id="orderItems"></div>
+
+        <h3>Total: ₹<span id="totalAmount">0</span></h3>
+
+        <h3>Payment Method</h3>
+
+        <label>
+          <input type="radio" name="payment" value="cod" checked />
+          Cash on Delivery
+        </label>
+
+        <label>
+          <input type="radio" name="payment" value="online" />
+          Online Payment
+        </label>
+
+        <button onclick="placeOrder()">Proceed to Payment</button>
+      </div>
     </div>
 
-    <!-- PRODUCTS -->
-    <h2>Your Order</h2>
-    <div id="orderItems"></div>
-
-    <h3>Total: ₹<span id="totalAmount">0</span></h3>
-
-    <!-- PAYMENT -->
-    <h3>Payment Method</h3>
-
-    <label>
-        <input type="radio" name="payment" value="cod" checked> Cash on Delivery
-    </label>
-
-    <label>
-        <input type="radio" name="payment" value="online"> Online Payment
-    </label>
-
-    <button onclick="placeOrder()">Proceed to Payment</button>
-
-</div>
-
-<footer>
-    <ul>
+    <footer>
+      <ul>
         <li>About us</li>
         <li>Shipping Policy</li>
         <li>Terms & Conditions</li>
         <li>Contact us</li>
-    </ul>
-</footer>
-<script src="js/order.js"></script>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-</body>
+      </ul>
+    </footer>
+    <script src="js/order.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </body>
 </html>

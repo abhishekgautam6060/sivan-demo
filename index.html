@@ -1,270 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sivan Store</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/stylee.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <div id="sidebar" class="sidebar">
-
-        <!-- HEADER -->
-        <div class="sidebar-header">
-            <div class="user-info">
-                <div class="user-icon">
-                    <i class="far fa-user"></i>
-                </div>
-                <div>
-                    <h3 id="profileName">Hey There!</h3>
-                    <p id="loginSection" onclick="goToLogin()">Login</p>
-                </div>
-            </div>
-
-            <span class="close-btn" onclick="closeSidebar()">✕</span>
+      <!-- HEADER -->
+      <div class="sidebar-header">
+        <div class="user-info">
+          <div class="user-icon">
+            <i class="far fa-user"></i>
+          </div>
+          <div>
+            <h3 id="profileName">Hey There!</h3>
+            <p id="loginSection" onclick="goToLogin()">Login</p>
+          </div>
         </div>
 
-        <!-- MENU -->
-        <div class="menu">
+        <span class="close-btn" onclick="closeSidebar()">✕</span>
+      </div>
 
-            <p class="menu-title">SHOP IN</p>
+      <!-- MENU -->
+      <div class="menu">
+        <p class="menu-title">SHOP IN</p>
 
-            <div class="menu-item" onclick="gotToNewCollection()">
-                <div class="icon"><i class="fas fa-tshirt"></i></div>
-                New Collection
-            </div>
-
-            <div class="menu-item" onclick="gotToBestSeller()">
-                <div class="icon"><i class="fas fa-star"></i></div>
-                Best Sellers
-            </div>
-
-            <div class="menu-item" onclick="gotToAllCollections()">
-                <div class="icon"><i class="fas fa-star"></i></div>
-                All Collections
-            </div>
-
-            <div class="menu-item" onclick="openOrders()">
-                <div class="icon"><i class="fas fa-box"></i></div>
-                Your Orders
-            </div>
-
-            <div class="menu-item" onclick="openProfile()">
-                <div class="icon"><i class="fas fa-user"></i></div>
-                Profile
-            </div>
-
-            <div class="menu-item logout" onclick="logout()">
-                <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
-                Logout
-            </div>
-
+        <div class="menu-item" onclick="gotToNewCollection()">
+          <div class="icon"><i class="fas fa-tshirt"></i></div>
+          New Collection
         </div>
 
+        <div class="menu-item" onclick="gotToBestSeller()">
+          <div class="icon"><i class="fas fa-star"></i></div>
+          Best Sellers
+        </div>
+
+        <div class="menu-item" onclick="gotToAllCollections()">
+          <div class="icon"><i class="fas fa-star"></i></div>
+          All Collections
+        </div>
+
+        <div class="menu-item" onclick="openOrders()">
+          <div class="icon"><i class="fas fa-box"></i></div>
+          Your Orders
+        </div>
+
+        <div class="menu-item" onclick="openProfile()">
+          <div class="icon"><i class="fas fa-user"></i></div>
+          Profile
+        </div>
+
+        <div class="menu-item logout" onclick="logout()">
+          <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
+          Logout
+        </div>
+      </div>
     </div>
 
     <!-- OVERLAY -->
     <div id="overlay" onclick="closeSidebar()"></div>
     <!-- TOP BAR -->
-    <div class="top-bar">
-        Welcome to Sivan
-    </div>
+    <div class="top-bar">Welcome to Sivan</div>
     <!-- HERO SECTION -->
     <section class="hero">
-        <!-- SLIDES -->
-        <div class="slides">
-
-            <div class="slide active">
-                <img src="./image/daftar-badiee-Mul-Cotton/1.png" onclick="goToCategory4()">
-            </div>
-
-            <div class="slide">
-                <img src="./image/rust-orange-chinon/5.png" onclick="goToCategory1()">
-            </div>
-
-            <div class="slide">
-                <img src="./image/lachak-Georgette Glass/1.png" onclick="goToCategory2()">
-            </div>
-
-            <div class="slide">
-                <img src="./image/khawab-Champagne gold/1.png" onclick="goToCategory3()">
-            </div>
-
+      <!-- SLIDES -->
+      <div class="slides">
+        <div class="slide active">
+          <img
+            src="./image/daftar-badiee-Mul-Cotton/1.png"
+            onclick="goToCategory4()"
+          />
         </div>
-        <div class="navbar">
-            <div class="left-icons">
-                <div class="hamburger" onclick="event.stopPropagation(); openSidebar();">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="logo">
-                SIVAN
-            </div>
-            <div class="right-icons">
-                <div class="cart-icon" onclick="event.stopPropagation(); goToCart()">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cartCount" id="cartCount">0</span>
-                </div>
-            </div>
+        <div class="slide">
+          <img
+            src="./image/lachak-Georgette Glass/1.png"
+            onclick="goToCategory2()"
+          />
         </div>
 
-        <div class="hero-text">
-            Welcome To Sivan
+        <div class="slide">
+          <img
+            src="./image/khawab-Champagne gold/1.png"
+            onclick="goToCategory3()"
+          />
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="left-section">
+          <div class="logo">SIVAN</div>
         </div>
 
+        <div class="desktop-menu">
+          <span onclick="gotToAllCollections()">All Collection</span>
+          <span onclick="gotToNewCollection()">New Collection</span>
+          <span onclick="gotToBestSeller()">Best Seller</span>
+        </div>
+
+        <div class="right-section">
+          <div class="cart-icon" onclick="event.stopPropagation(); goToCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cartCount" id="cartCount">0</span>
+          </div>
+          <div class="profile-icon" onclick="openProfile()">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <div class="left-icons">
+          <div
+            class="hamburger"
+            onclick="event.stopPropagation(); openSidebar();"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="logo-nav">SIVAN</div>
+        <div class="right-icons">
+          <div class="cart-icon" onclick="event.stopPropagation(); goToCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cartCount" id="cartCount">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-text">Welcome To Sivan</div>
     </section>
 
     <!-- WATCH AND SHOP -->
     <section class="watch">
-
+      <div class="watch-header">
         <h2>WATCH AND SHOP!</h2>
+      </div>
 
-        <div class="video-scroll">
-
-            <div class="video-card">
-                <video class="watch-video" muted playsinline autoplay loop preload="metadata">
-                    <source src="image/v-1.mp4" type="video/mp4">
-                </video>
-                <div class="play"><i class="fas fa-play"></i></div>
-            </div>
-
-            <div class="video-card">
-                <video class="watch-video" muted playsinline autoplay loop preload="metadata">
-                    <source src="image/v-2.mp4" type="video/mp4">
-                </video>
-                <div class="play"><i class="fas fa-play"></i></div>
-            </div>
-
-            <div class="video-card">
-                <video class="watch-video" muted playsinline autoplay loop preload="metadata">
-                    <source src="image/v-3.mp4" type="video/mp4">
-                </video>
-                <div class="play"><i class="fas fa-play"></i></div>
-            </div>
-            <div class="video-card">
-                <video class="watch-video" muted playsinline autoplay loop preload="metadata">
-                    <source src="image/v-4.mp4" type="video/mp4">
-                </video>
-                <div class="play"><i class="fas fa-play"></i></div>
-            </div>
-            <div class="video-card">
-                <video class="watch-video" muted playsinline autoplay loop preload="metadata">
-                    <source src="image/v-5.mp4" type="video/mp4">
-                </video>
-                <div class="play"><i class="fas fa-play"></i></div>
-            </div>
-            <div class="video-card">
-                <video class="watch-video" muted playsinline autoplay loop preload="metadata">
-                    <source src="image/v-6.mp4" type="video/mp4">
-                </video>
-                <div class="play"><i class="fas fa-play"></i></div>
-            </div>
+      <div class="video-scroll">
+        <div class="video-card">
+          <video
+            class="watch-video"
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="metadata"
+          >
+            <source src="image/v-1.mp4" type="video/mp4" />
+          </video>
+          <div class="play"><i class="fas fa-play"></i></div>
         </div>
+
+        <div class="video-card">
+          <video
+            class="watch-video"
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="metadata"
+          >
+            <source src="image/v-2.mp4" type="video/mp4" />
+          </video>
+          <div class="play"><i class="fas fa-play"></i></div>
+        </div>
+
+        <div class="video-card">
+          <video
+            class="watch-video"
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="metadata"
+          >
+            <source src="image/v-3.mp4" type="video/mp4" />
+          </video>
+          <div class="play"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-card">
+          <video
+            class="watch-video"
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="metadata"
+          >
+            <source src="image/v-4.mp4" type="video/mp4" />
+          </video>
+          <div class="play"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-card">
+          <video
+            class="watch-video"
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="metadata"
+          >
+            <source src="image/v-5.mp4" type="video/mp4" />
+          </video>
+          <div class="play"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-card">
+          <video
+            class="watch-video"
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="metadata"
+          >
+            <source src="image/v-6.mp4" type="video/mp4" />
+          </video>
+          <div class="play"><i class="fas fa-play"></i></div>
+        </div>
+      </div>
     </section>
     <!-- SHOP BY COLLECTION -->
     <section class="collection">
+      <div class="collection-header">
         <h2>SHOP BY COLLECTION</h2>
-        <!-- FEATURED COLLECTION -->
-        <section class="featured-collection">
+      </div>
+      <!-- FEATURED COLLECTION -->
+      <section class="featured-collection">
+        <div class="featured-grid">
+          <div class="featured-card" onclick="goToCategory1()">
+            <img
+              class="collection-card"
+              src="./image/rust-orange-chinon/5.png"
+            />
+            <h3>AURA</h3>
+            <img class="shop-btn" src="./image/Shop-now.png" />
+          </div>
+          <div class="featured-card" onclick="goToCategory2()">
+            <img
+              class="collection-card"
+              src="./image/lachak-Georgette Glass/1.png"
+            />
+            <h3>LACHAK</h3>
+            <img class="shop-btn" src="./image/Shop-now.png" />
+          </div>
+          <div class="featured-card" onclick="goToCategory3()">
+            <img
+              class="collection-card"
+              src="./image/khawab-Dark purple /1.png"
+            />
+            <h3>KHAWAB</h3>
+            <img class="shop-btn" src="./image/Shop-now.png" />
+          </div>
+          <div class="featured-card" onclick="goToCategory4()">
+            <img
+              class="collection-card"
+              src="./image/daftar-badiee-Mul-Cotton/1.png"
+            />
+            <h3>DAFTAAR BADDIE</h3>
+            <img class="shop-btn" src="./image/Shop-now.png" />
+          </div>
+        </div>
+      </section>
 
-            <div class="featured-grid">
+      <!-- WHY SIVAN -->
 
-                <div class="featured-card" onclick="goToCategory1()">
-                    <img class="collection-card" src="./image/rust-orange-chinon/5.png">
-                    <h3>AURA</h3>
-                    <img class="shop-btn" src="./image/Shop-now.png">
-                </div>
-                <div class="featured-card" onclick="goToCategory2()">
-                    <img class="collection-card" src="./image/lachak-Georgette Glass/1.png">
-                    <h3>LACHAK</h3>
-                    <img class="shop-btn" src="./image/Shop-now.png">
-                </div>
-                <div class="featured-card" onclick="goToCategory3()">
-                    <img class="collection-card" src="./image/khawab-Dark purple /1.png">
-                    <h3>KHAWAB</h3>
-                    <img class="shop-btn" src="./image/Shop-now.png">
-                </div>
-                <div class="featured-card" onclick="goToCategory4()">
-                    <img class="collection-card" src="./image/daftar-badiee-Mul-Cotton/1.png">
-                    <h3>DAFTAAR BADDIE</h3>
-                    <img class="shop-btn" src="./image/Shop-now.png">
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- WHY SIVAN -->
-
-        <section class="why-sivan">
-
-            <div class="why-left">
-
-                <h2>WHY SIVAN?</h2>
-
-                <p>
-                    At SIVAN, we don’t just create sarees — we craft stories of tradition, grace, and timeless beauty.
-                    Every piece is thoughtfully designed to celebrate the modern Indian woman while staying rooted in
-                    heritage. From fabric selection to final drape, we ensure elegance in every detail.
-                    Because when you wear SIVAN, you don’t just dress up — you express yourself.
-                </p>
-
-            </div>
-
-            <div class="why-right">
-                <img src="./image/khawab-Dark purple /1.png">
-            </div>
-
-        </section>
-
-
+      <section class="why-sivan">
+        <div class="why-left-desktop-content">
+          <h2>WHY SIVAN?</h2>
+          <p>
+            At SIVAN, we don’t just create sarees — we craft stories of
+            tradition, grace, and timeless beauty. Every piece is thoughtfully
+            designed to celebrate the modern Indian woman while staying rooted
+            in heritage. From fabric selection to final drape, we ensure
+            elegance in every detail. Because when you wear SIVAN, you don’t
+            just dress up — you express yourself.
+          </p>
+        </div>
+      </section>
     </section>
 
     <section class="follow">
+      <h3>Follow us on</h3>
 
-        <h3>Follow us on</h3>
-
-        <div class="social-icons">
-            <i class="fab fa-instagram" onclick="openInsta()"></i>
-            <i class="fab fa-facebook"></i>
-        </div>
-
+      <div class="social-icons">
+        <i class="fab fa-instagram" onclick="openInsta()"></i>
+        <i class="fab fa-facebook" onclick="openInsta()"></i>
+      </div>
     </section>
-
 
     <!-- INSTAGRAM GALLERY -->
 
     <section class="insta-gallery">
-
-        <img src="./image/footer/i-1.png" onclick="openInsta1()">
-        <img src="./image/footer/i-2.png" onclick="openInsta2()">
-        <img src="./image/footer/i-3.png" onclick="openInsta3()">
-        <img src="./image/footer/i-4.png" onclick="openInsta4()">
-        <img src="./image/footer/i-6.png" onclick="openInsta5()">
-        <img src="./image/footer/i-7.png" onclick="openInsta6()">
-
+      <img src="./image/footer/i-1.png" onclick="openInsta1()" />
+      <img src="./image/footer/i-2.png" onclick="openInsta2()" />
+      <img src="./image/footer/i-3.png" onclick="openInsta3()" />
+      <img src="./image/footer/i-4.png" onclick="openInsta4()" />
+      <img src="./image/footer/i-6.png" onclick="openInsta5()" />
+      <img src="./image/footer/i-7.png" onclick="openInsta6()" />
     </section>
-
 
     <!-- FOOTER -->
 
     <footer>
-
-        <ul>
-            <li>About us</li>
-            <li>Shipping Policy</li>
-            <li>Terms & Conditions</li>
-            <li>Contact us</li>
-            <li>Shipping Policy</li>
-        </ul>
-
+      <ul>
+        <li>About us</li>
+        <li>Shipping Policy</li>
+        <li>Terms & Conditions</li>
+        <li>Contact us</li>
+      </ul>
     </footer>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
