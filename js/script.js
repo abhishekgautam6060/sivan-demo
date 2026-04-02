@@ -1,22 +1,22 @@
 const videos = document.querySelectorAll(".watch-video");
 
-videos.forEach(video => {
+videos.forEach((video) => {
+  // 🔥 AUTO PLAY WHEN VISIBLE
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
 
-    // 🔥 AUTO PLAY WHEN VISIBLE
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                video.play().catch(() => {});
-            } else {
-                video.pause();
-            }
-        });
-    }, { threshold: 0.6 });
-
-    observer.observe(video);
-
+  observer.observe(video);
 });
-
 
 // const videos = document.querySelectorAll(".watch-video");
 
@@ -31,129 +31,122 @@ videos.forEach(video => {
 //     });
 // });
 
-
 window.onload = function () {
-    updateCartCount();
-    updateUserUI();
+  updateCartCount();
+  updateUserUI();
 };
 
 function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalQty = 0;
 
-    let totalQty = 0;
+  cart.forEach((item) => {
+    totalQty += item.quantity;
+  });
 
-    cart.forEach(item => {
-        totalQty += item.quantity;
-    });
+  const cartCount = document.getElementById("cartCount");
 
-    const cartCount = document.getElementById("cartCount");
-
-    if (cartCount) {
-        cartCount.innerText = totalQty;
-    }
+  if (cartCount) {
+    cartCount.innerText = totalQty;
+  }
 }
 
 function goToCategory1() {
-    window.location.href = "category/cat-Aura.html";
+  window.location.href = "category/cat-Aura.html";
 }
 function goToCategory() {
-    window.location.href = "category/cat-khawab.html";
+  window.location.href = "category/cat-khawab.html";
 }
 function goToCategory2() {
-    window.location.href = "category/cat-lachak.html";
+  window.location.href = "category/cat-lachak.html";
 }
 function goToCategory3() {
-    window.location.href = "category/cat-khawab.html";
+  window.location.href = "category/cat-khawab.html";
 }
 function goToCategory4() {
-    window.location.href = "category/cat-daftar.html";
+  window.location.href = "category/cat-daftar.html";
 }
 
 function goToCart() {
-    window.location.href = "cart.html";
+  window.location.href = "cart.html";
 }
 
 function openSidebar() {
-    document.getElementById("sidebar").classList.add("active");
-    document.getElementById("overlay").classList.add("active");
+  document.getElementById("sidebar").classList.add("active");
+  document.getElementById("overlay").classList.add("active");
 }
 
 function closeSidebar() {
-    document.getElementById("sidebar").classList.remove("active");
-    document.getElementById("overlay").classList.remove("active");
+  document.getElementById("sidebar").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
 }
 
 function updateUserUI() {
+  const email = localStorage.getItem("userEmail");
 
-    const email = localStorage.getItem("userEmail");
+  const profileName = document.getElementById("profileName");
+  const loginSection = document.getElementById("loginSection");
 
-    const profileName = document.getElementById("profileName");
-    const loginSection = document.getElementById("loginSection");
+  if (email && email !== "null") {
+    // ✅ Extract name before @
+    const name = email.split("@")[0];
 
-    if (email && email !== "null") {
+    profileName.innerText = name;
 
-        // ✅ Extract name before @
-        const name = email.split("@")[0];
-
-        profileName.innerText = name;
-
-        loginSection.style.display = "none";
-
-    } else {
-
-        profileName.innerText = "Hey There!";
-        loginSection.style.display = "block";
-    }
+    loginSection.style.display = "none";
+  } else {
+    profileName.innerText = "Hey There!";
+    loginSection.style.display = "block";
+  }
 }
 
-
 function openProfile() {
-    const email = localStorage.getItem("userEmail");
+  const email = localStorage.getItem("userEmail");
 
-    if (!phone) {
-        alert("Please login first ⚠️");
-        window.location.href = "login.html";
-    } else {
-        window.location.href = "profile.html";
-    }
+  if (!phone) {
+    alert("Please login first ⚠️");
+    window.location.href = "login.html";
+  } else {
+    window.location.href = "profile.html";
+  }
 }
 
 function openOrders() {
-    const email = localStorage.getItem("userEmail");
+  const email = localStorage.getItem("userEmail");
 
-    if (!phone) {
-        alert("Please login first ⚠️");
-        window.location.href = "login.html";
-    } else {
-        window.location.href = "orders.html";
-    }
+  if (!phone) {
+    alert("Please login first ⚠️");
+    window.location.href = "login.html";
+  } else {
+    window.location.href = "orders.html";
+  }
 }
 
 function logout() {
-    localStorage.removeItem("userEmail");
-    alert("Logged out ✅");
-    window.location.href = "index.html";
+  localStorage.removeItem("userEmail");
+  alert("Logged out ✅");
+  window.location.href = "index.html";
 }
 
-function gotToNewCollection(){
-    window.location.href = "category/cat-daftar.html";
+function gotToNewCollection() {
+  window.location.href = "category/cat-daftar.html";
 }
 
-function gotToBestSeller(){
-    window.location.href = "category/cat-khawab.html";
+function gotToBestSeller() {
+  window.location.href = "category/cat-khawab.html";
 }
 
-function gotToAllCollections(){
-    window.location.href = "category.html";
+function gotToAllCollections() {
+  window.location.href = "category.html";
 }
 
-function openOrders(){
-    window.location.href = "UserOrders.html";
+function openOrders() {
+  window.location.href = "UserOrders.html";
 }
 
-function goToLogin(){
-    window.location.href = "login.html";
+function goToLogin() {
+  window.location.href = "login.html";
 }
 
 let currentSlide = 0;
@@ -161,40 +154,71 @@ let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 
 function showSlide(index) {
+  slides.forEach((slide) => slide.classList.remove("active"));
 
-    slides.forEach(slide => slide.classList.remove("active"));
-
-    slides[index].classList.add("active");
+  slides[index].classList.add("active");
 }
 
 function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
 }
 
 // 🔥 AUTO SLIDE EVERY 3 SEC
 setInterval(nextSlide, 3000);
 
-
-function openInsta(){
-    window.open("https://www.instagram.com/sivan_jaipuri/", "_blank");
+function openInsta() {
+  window.open("https://www.instagram.com/sivan_jaipuri/", "_blank");
+}
+function openInsta1() {
+  window.open(
+    "https://www.instagram.com/reel/DVEJm44El3R/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "_blank"
+  );
+}
+function openInsta2() {
+  window.open(
+    "https://www.instagram.com/reel/DVA_WOdjxoF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "_blank"
+  );
+}
+function openInsta3() {
+  window.open(
+    "https://www.instagram.com/reel/DT9g9HAjxH4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "_blank"
+  );
+}
+function openInsta4() {
+  window.open(
+    "https://www.instagram.com/reel/DT9jUWdkq6M/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "_blank"
+  );
+}
+function openInsta5() {
+  window.open(
+    "https://www.instagram.com/reel/DSKdjIkkpXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "_blank"
+  );
+}
+function openInst6() {
+  window.open(
+    "https://www.instagram.com/reel/DUtB1CTj9JG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "_blank"
+  );
 }
 
-function openInsta1(){
-    window.open("https://www.instagram.com/reel/DVEJm44El3R/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
+function openAboutUs() {
+  window.location.href = "./footer/about-us.html";
 }
-function openInsta2(){
-    window.open("https://www.instagram.com/reel/DVA_WOdjxoF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
+
+function openTerms() {
+  window.location.href = "./footer/term-condition.html";
 }
-function openInsta3(){
-    window.open("https://www.instagram.com/reel/DT9g9HAjxH4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
+
+function contactUs() {
+  window.location.href = "./footer/contact-us.html";
 }
-function openInsta4(){
-    window.open("https://www.instagram.com/reel/DT9jUWdkq6M/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
-}
-function openInsta5(){
-    window.open("https://www.instagram.com/reel/DSKdjIkkpXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
-}
-function openInst6(){
-    window.open("https://www.instagram.com/reel/DUtB1CTj9JG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "_blank");
+
+function openShipping() {
+  window.location.href = "./footer/shipping.html";
 }

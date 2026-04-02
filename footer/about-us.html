@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="sidebar" class="sidebar">
+      <!-- HEADER -->
+      <div class="sidebar-header">
+        <div class="user-info">
+          <div class="user-icon">
+            <i class="far fa-user"></i>
+          </div>
+          <div>
+            <h3 id="profileName">Hey There!</h3>
+            <p id="loginSection" onclick="goToLogin()">Login</p>
+          </div>
+        </div>
+
+        <span class="close-btn" onclick="closeSidebar()">✕</span>
+      </div>
+
+      <!-- MENU -->
+      <div class="menu">
+        <p class="menu-title">SHOP IN</p>
+
+        <div class="menu-item" onclick="gotToNewCollection()">
+          <div class="icon"><i class="fas fa-tshirt"></i></div>
+          New Collection
+        </div>
+
+        <div class="menu-item" onclick="gotToBestSeller()">
+          <div class="icon"><i class="fas fa-star"></i></div>
+          Best Sellers
+        </div>
+
+        <div class="menu-item" onclick="gotToAllCollections()">
+          <div class="icon"><i class="fas fa-star"></i></div>
+          All Collections
+        </div>
+
+        <div class="menu-item" onclick="openOrders()">
+          <div class="icon"><i class="fas fa-box"></i></div>
+          Your Orders
+        </div>
+
+        <div class="menu-item" onclick="openProfile()">
+          <div class="icon"><i class="fas fa-user"></i></div>
+          Profile
+        </div>
+
+        <div class="menu-item logout" onclick="logout()">
+          <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
+          Logout
+        </div>
+      </div>
+    </div>
+
+    <!-- OVERLAY -->
+    <div id="overlay" onclick="closeSidebar()"></div>
+    <!-- TOP BAR -->
+    <div class="top-bar">Use coupon code Sivan01 to get 15% off</div>
+    <section class="hero" onclick="goToCategory()">
+      <div class="navbar">
+        <div class="left-section" onclick="goToHome()">
+          <div class="logo">SIVAN</div>
+        </div>
+
+        <div class="desktop-menu">
+          <span>All Collection</span>
+          <span>New Collection</span>
+          <span>Best Seller</span>
+        </div>
+
+        <div class="right-section">
+          <div class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+          <div class="profile-icon">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <div class="left-icons">
+          <div
+            class="hamburger"
+            onclick="event.stopPropagation(); openSidebar();"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="logo-nav">SIVAN</div>
+        <div class="right-icons">
+          <div class="cart-icon" onclick="event.stopPropagation(); goToCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cartCount" id="cartCount">0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="about-container">
+      <!-- LEFT SIDE -->
+      <div class="about-left">
+        <h1>ABOUT US</h1>
+
+        <p>
+          Welcome to Sivan, a Jaipur-born origin crafted with the idea of
+          bringing sarees that embody confidence, elegance, and style. Rooted in
+          the cultural heart of Rajasthan, we create pieces that celebrate the
+          modern woman while honouring timeless traditions.
+        </p>
+
+        <p>
+          Every saree in our collection is thoughtfully designed — soft in feel,
+          rich in detail, and created to make every woman feel effortlessly
+          graceful.
+        </p>
+
+        <p>
+          At Sivan, we believe a saree is more than attire; it’s an emotion, a
+          statement, and a story woven into six yards.
+          <br /><br />
+          Shop and become a Sivanian.
+        </p>
+
+        <hr />
+
+        <div class="contact-info">
+          <p>
+            Have any questions or concerns?<br />We're always ready to help!
+          </p>
+
+          <p class="contact-details">
+            Call us at<br />
+            <strong>6375677348</strong><br /><br />
+            or send us an email to:<br />
+            <strong>info@sivanjaipuri.com</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE FORM -->
+      <div class="about-right">
+        <form id="contactForm">
+          <div class="row">
+            <input type="text" placeholder="First Name *" required />
+            <input type="text" placeholder="Last Name *" required />
+          </div>
+
+          <div class="row">
+            <input type="email" placeholder="Email *" required />
+            <input type="text" placeholder="Subject" />
+          </div>
+
+          <textarea placeholder="Message"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li onclick="openAboutUs()">About us</li>
+        <li onclick="openShipping()">Shipping Policy</li>
+        <li onclick="openTerms()">Terms & Conditions</li>
+        <li onclick="contactUs()">Contact us</li>
+      </ul>
+    </footer>
+    <script src="js/order.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </body>
+</html>

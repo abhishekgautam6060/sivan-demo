@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="sidebar" class="sidebar">
+      <!-- HEADER -->
+      <div class="sidebar-header">
+        <div class="user-info">
+          <div class="user-icon">
+            <i class="far fa-user"></i>
+          </div>
+          <div>
+            <h3 id="profileName">Hey There!</h3>
+            <p id="loginSection" onclick="goToLogin()">Login</p>
+          </div>
+        </div>
+
+        <span class="close-btn" onclick="closeSidebar()">✕</span>
+      </div>
+
+      <!-- MENU -->
+      <div class="menu">
+        <p class="menu-title">SHOP IN</p>
+
+        <div class="menu-item" onclick="gotToNewCollection()">
+          <div class="icon"><i class="fas fa-tshirt"></i></div>
+          New Collection
+        </div>
+
+        <div class="menu-item" onclick="gotToBestSeller()">
+          <div class="icon"><i class="fas fa-star"></i></div>
+          Best Sellers
+        </div>
+
+        <div class="menu-item" onclick="gotToAllCollections()">
+          <div class="icon"><i class="fas fa-star"></i></div>
+          All Collections
+        </div>
+
+        <div class="menu-item" onclick="openOrders()">
+          <div class="icon"><i class="fas fa-box"></i></div>
+          Your Orders
+        </div>
+
+        <div class="menu-item" onclick="openProfile()">
+          <div class="icon"><i class="fas fa-user"></i></div>
+          Profile
+        </div>
+
+        <div class="menu-item logout" onclick="logout()">
+          <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
+          Logout
+        </div>
+      </div>
+    </div>
+
+    <!-- OVERLAY -->
+    <div id="overlay" onclick="closeSidebar()"></div>
+    <!-- TOP BAR -->
+    <div class="top-bar">Use coupon code Sivan01 to get 15% off</div>
+    <section class="hero" onclick="goToCategory()">
+      <div class="navbar">
+        <div class="left-section" onclick="goToHome()">
+          <div class="logo">SIVAN</div>
+        </div>
+
+        <div class="desktop-menu">
+          <span>All Collection</span>
+          <span>New Collection</span>
+          <span>Best Seller</span>
+        </div>
+
+        <div class="right-section">
+          <div class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+          <div class="profile-icon">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <div class="left-icons">
+          <div
+            class="hamburger"
+            onclick="event.stopPropagation(); openSidebar();"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="logo-nav">SIVAN</div>
+        <div class="right-icons">
+          <div class="cart-icon" onclick="event.stopPropagation(); goToCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cartCount" id="cartCount">0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="terms-container">
+      <h1>Terms & Conditions</h1>
+      <p class="last-updated">Last updated: April 2026</p>
+
+      <div class="terms-content">
+        <h2>1. Introduction</h2>
+        <p>
+          Welcome to Sivan. By accessing and using our website, you accept and
+          agree to be bound by the terms and conditions outlined below. These
+          terms apply to all visitors, users, and customers of our platform.
+        </p>
+
+        <h2>2. Products & Services</h2>
+        <p>
+          Sivan offers sarees and related fashion products crafted with
+          attention to quality and detail. We strive to ensure that product
+          descriptions, images, and pricing are accurate, but slight variations
+          may occur.
+        </p>
+
+        <h2>3. Pricing & Payments</h2>
+        <p>
+          All prices are listed in INR and are subject to change without prior
+          notice. Payments must be completed at the time of purchase through our
+          supported payment methods.
+        </p>
+
+        <h2>4. Shipping & Delivery</h2>
+        <p>
+          We aim to deliver products within the estimated timeframe. However,
+          delays may occur due to unforeseen circumstances. Sivan is not
+          responsible for delays caused by third-party courier services.
+        </p>
+
+        <h2>5. Returns & Refunds</h2>
+        <p>
+          Returns are accepted only for defective or incorrect items within a
+          specified period. Products must be unused and in original condition.
+          Refunds will be processed after inspection.
+        </p>
+
+        <h2>6. Intellectual Property</h2>
+        <p>
+          All content on this website, including images, text, logos, and
+          designs, is the property of Sivan and may not be used without
+          permission.
+        </p>
+
+        <h2>7. User Responsibilities</h2>
+        <p>
+          Users agree not to misuse the website, engage in fraudulent
+          activities, or violate any applicable laws while using our services.
+        </p>
+
+        <h2>8. Limitation of Liability</h2>
+        <p>
+          Sivan shall not be held liable for any indirect, incidental, or
+          consequential damages arising from the use of our website or products.
+        </p>
+
+        <h2>9. Changes to Terms</h2>
+        <p>
+          We reserve the right to update these terms at any time. Changes will
+          be effective immediately upon posting on this page.
+        </p>
+
+        <h2>10. Contact Us</h2>
+        <p>
+          If you have any questions about these Terms & Conditions, please
+          contact us at:
+          <br /><br />
+          <strong>Email:</strong> info@sivanjaipuri.com<br />
+          <strong>Phone:</strong> 6375677348
+        </p>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li onclick="openAboutUs()">About us</li>
+        <li onclick="openShipping()">Shipping Policy</li>
+        <li onclick="openTerms()">Terms & Conditions</li>
+        <li onclick="contactUs()">Contact us</li>
+      </ul>
+    </footer>
+    <script src="js/order.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </body>
+</html>
