@@ -222,3 +222,33 @@ function contactUs() {
 function openShipping() {
   window.location.href = "./footer/shipping.html";
 }
+
+const videoss = document.querySelectorAll(".video-card video");
+const modal = document.getElementById("videoModal");
+const modalVideo = document.getElementById("modalVideo");
+const closeBtn = document.querySelector(".close-btn");
+
+videoss.forEach((video) => {
+  video.addEventListener("click", () => {
+    const source = video.querySelector("source").src;
+
+    modal.style.display = "flex";
+    modalVideo.src = source;
+    modalVideo.play();
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  modalVideo.pause();
+  modalVideo.src = "";
+});
+
+// Optional: close when clicking outside
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    modalVideo.pause();
+    modalVideo.src = "";
+  }
+});
