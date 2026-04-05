@@ -18,6 +18,10 @@ function openShipping() {
   window.location.href = "shipping.html";
 }
 
+function goToHome() {
+  window.location.href = "../index.html";
+}
+
 function logout() {
   localStorage.removeItem("userEmail");
   alert("Logged out ✅");
@@ -29,11 +33,11 @@ function gotToNewCollection() {
 }
 
 function gotToBestSeller() {
-  window.location.href = ".../category/cat-khawab.html";
+  window.location.href = "../category/cat-khawab.html";
 }
 
 function gotToAllCollections() {
-  window.location.href = "..../category.html";
+  window.location.href = "../category.html";
 }
 
 function openOrders() {

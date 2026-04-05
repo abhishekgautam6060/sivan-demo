@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
+
     <link rel="stylesheet" href="../css/product.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
+
   <body>
     <div id="sidebar" class="sidebar">
       <!-- HEADER -->
@@ -75,9 +78,9 @@
         </div>
 
         <div class="desktop-menu">
-          <span>All Collection</span>
-          <span>New Collection</span>
-          <span>Best Seller</span>
+          <span onclick="gotToAllCollections()">All Collection</span>
+          <span onclick="gotToNewCollection()">New Collection</span>
+          <span onclick="gotToBestSeller()">Best Seller</span>
         </div>
 
         <div class="right-section">
@@ -107,13 +110,16 @@
         </div>
       </div>
     </section>
+
     <div class="product-container">
       <div class="product-image">
         <div class="slider" id="product-slider">
-          <img src="../image/khawab-Champagne gold/1.png" />
-          <img src="../image/khawab-Champagne gold/2.png" />
-          <img src="../image/khawab-Champagne gold/3.png" />
-          <img src="../image/khawab-Champagne gold/4.png" />
+          <img src="../image/daftar-badiee-Mul-Cotton/12.JPEG" />
+          <img src="../image/daftar-badiee-Mul-Cotton/13.JPEG" />
+          <img src="../image/daftar-badiee-Mul-Cotton/7.JPG" />
+          <img src="../image/daftar-badiee-Mul-Cotton/8.JPG" />
+          <img src="../image/daftar-badiee-Mul-Cotton/9.JPEG" />
+          <img src="../image/daftar-badiee-Mul-Cotton/10.JPEG" />
         </div>
       </div>
 
@@ -128,10 +134,9 @@
 
       <!-- PRODUCT INFO -->
       <div class="product-info">
-        <h2>Champagne gold with a peach-beige tone Fandy Silk</h2>
-
+        <h2>The Mul Cotton Saree</h2>
         <div class="price">
-          <span class="new" id="price">₹1,899.00</span>
+          <span class="new" id="price">₹1,599.00</span>
         </div>
         <!-- PROMO CODE -->
         <div class="promo-section">
@@ -153,8 +158,8 @@
 
         <!-- COLOR -->
         <div class="color-section">
-          <p>Color: Champagne gold *</p>
-          <div class="color-box-7"></div>
+          <p>Color: Multi-Color *</p>
+          <div class="color-box-5"></div>
         </div>
 
         <!-- QUANTITY -->
@@ -174,6 +179,7 @@
             Add to Cart
             <i class="far fa-heart"></i>
           </button>
+
           <button class="buy" onclick="addToCart()">Buy Now</button>
         </div>
       </div>
@@ -181,9 +187,9 @@
       <div class="description">
         <h3>Description</h3>
         <ul>
-          <li>Fabric: Fandy Silk</li>
-          <li>Blouse: Unstitched blouse piece in the same fabric</li>
-          <li>Border - Crystal Lace</li>
+          <li>Fabric - Mul Cotton</li>
+          <li>Blouse - No</li>
+          <li>Print - Bagru</li>
           <li>Saree Length - 5.5 Meter</li>
           <li>Care Instruction - Dry Clean Only</li>
         </ul>

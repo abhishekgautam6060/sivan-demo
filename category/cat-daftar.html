@@ -69,18 +69,18 @@
     <!-- OVERLAY -->
     <div id="overlay" onclick="closeSidebar()"></div>
     <!-- TOP BAR -->
-    <div class="top-bar"> Use coupon code Sivan01 to get 15% off </div>
+    <div class="top-bar">Use coupon code Sivan01 to get 15% off</div>
     <!-- HERO SECTION -->
-    <section class="hero" onclick="goToCategory()">
+    <section class="hero">
       <div class="navbar">
         <div class="left-section" onclick="goToHome()">
           <div class="logo">SIVAN</div>
         </div>
 
         <div class="desktop-menu">
-          <span>All Collection</span>
-          <span>New Collection</span>
-          <span>Best Seller</span>
+          <span onclick="gotToAllCollections()">All Collection</span>
+          <span onclick="gotToNewCollection()">New Collection</span>
+          <span onclick="gotToBestSeller()">Best Seller</span>
         </div>
 
         <div class="right-section">
@@ -135,18 +135,27 @@
 
           <h3>Mul Cotton</h3>
 
-          <p class="price">₹1,100.00</p>
+          <p class="price">₹1,499.00</p>
+        </div>
+
+        <div class="product-card" onclick="goToProduct8()">
+          <div class="product-img">
+            <img src="../image/daftar-badiee-Mul-Cotton/12.JPEG" />
+          </div>
+
+          <h3>Mul Cotton</h3>
+
+          <p class="price">₹1,599.00</p>
         </div>
       </div>
     </div>
 
     <footer>
       <ul>
-        <li>About us</li>
-        <li>Shipping Policy</li>
-        <li>Terms & Conditions</li>
-        <li>Contact us</li>
-        <li>Shipping Policy</li>
+        <li onclick="openAboutUs()">About us</li>
+        <li onclick="openShipping()">Shipping Policy</li>
+        <li onclick="openTerms()">Terms & Conditions</li>
+        <li onclick="contactUs()">Contact us</li>
       </ul>
     </footer>
     <script src="../js/category.js"></script>

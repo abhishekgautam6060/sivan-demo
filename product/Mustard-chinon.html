@@ -66,7 +66,7 @@
     <!-- OVERLAY -->
     <div id="overlay" onclick="closeSidebar()"></div>
     <!-- TOP BAR -->
-    <div class="top-bar"> Use coupon code Sivan01 to get 15% off </div>
+    <div class="top-bar">Use coupon code SIVAN15 to get 15% off</div>
     <!-- HERO SECTION -->
     <section class="hero" onclick="goToCategory()">
       <div class="navbar">
@@ -137,7 +137,24 @@
 
         <div class="price">
           <span class="old">₹1,999.00</span>
-          <span class="new">₹1,499.25</span>
+          <span class="new" id="price">₹1,499.25</span>
+        </div>
+        <!-- PROMO CODE -->
+        <div class="promo-section">
+          <input type="text" id="promoCode" placeholder="Enter promo code" />
+
+          <button id="applyBtn" onclick="applyPromo()">Apply</button>
+
+          <!-- ❌ Cancel Button -->
+          <button
+            id="removePromoBtn"
+            onclick="removePromo()"
+            style="display: none"
+          >
+            ✕
+          </button>
+
+          <p id="promoMessage"></p>
         </div>
 
         <!-- COLOR -->
@@ -213,11 +230,10 @@
 
     <footer>
       <ul>
-        <li>About us</li>
-        <li>Shipping Policy</li>
-        <li>Terms & Conditions</li>
-        <li>Contact us</li>
-        <li>Shipping Policy</li>
+        <li onclick="openAboutUs()">About us</li>
+        <li onclick="openShipping()">Shipping Policy</li>
+        <li onclick="openTerms()">Terms & Conditions</li>
+        <li onclick="contactUs()">Contact us</li>
       </ul>
     </footer>
 
